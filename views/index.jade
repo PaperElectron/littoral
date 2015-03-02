@@ -1,0 +1,10 @@
+doctype html
+head
+  title Littoral demo server.
+
+body
+  h1 Welcome to littoral
+
+  each app in apps
+    a(href=app.path) #{app.name}
+    p= app.description
