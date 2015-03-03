@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Littoral demo server.</title>
+    </head>
+    <body>
+        <h1>Welcome to Littoral</h1>
+        <h3>Rendering Handlebars based on index file in default view.</h3>
+        {{#each apps}}
+            <a href={{this.path}}>{{this.name}}</a>
+            <p>{{this.description}}</p>
+
+        {{/each}}
+
+    </body>
+</html>

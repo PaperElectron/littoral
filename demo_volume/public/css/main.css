@@ -1,0 +1,17 @@
+.arrange {background-color: #4f4082; padding-bottom: 1em}
+.sizer {width: 20%}
+.gutter-size {width: 1em}
+.demo { padding: 1em 0 0 1em; }
+.demoHolder {
+    background-color: #fff;
+    padding: 1em;
+}
+.demo.tiny {width: 10%}
+.demo.small {width: 25%}
+.demo.medium {width: 50%}
+.demo.large {width: 75%}
+.demo.full {width: 100%; padding: 1em 1em 0 1em}
+
+.demo .thumbnail {
+    margin-bottom: 0px;
+}
