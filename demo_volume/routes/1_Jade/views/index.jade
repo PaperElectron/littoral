@@ -1,8 +1,30 @@
 doctype html
 head
   title Jade Templating.
+  meta(charset='utf-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.min.css')
+  link(rel='stylesheet', href='css/main.css')
 body
-  h1 Jade Templating.
-  h2 Rendering Jade based on index file in default view.
-  p= description
+  a(href="/") Home
+  .jumbotron
+    .container
+      .media
+        .media-left
+          img.media-object(src="images/Jade.png")
+        .media-body
+          h1 Jade Templating
+          p Boostrap CSS
+
+  .container
+    .row
+      .col-sm-6
+        h2 Rendering Jade based on index file in default view.
+      .col-sm-6
+        p= description
+    hr
+    .row
+      .col-sm-12
+        h1 Bootstrap
+        img(src="http://getbootstrap.com/2.3.2/assets/img/bs-docs-responsive-illustrations.png")
   script(src='js/main.js')

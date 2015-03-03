@@ -1,0 +1,12 @@
+body {
+    background-color: #1d9559;
+    color: white;
+}
+
+.jumbotron {
+    color: GrayText;
+}
+
+.pad {
+    padding-left: 1em;
+}
