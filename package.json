@@ -24,7 +24,9 @@
   },
   "homepage": "https://github.com/PaperElectron/littoral",
   "dependencies": {
+    "ejs": "^2.3.1",
     "express": "^4.12.1",
+    "hbs": "^2.8.0",
     "jade": "^1.9.2",
     "lodash": "^3.3.1"
   }

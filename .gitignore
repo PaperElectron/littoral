@@ -1,5 +1,5 @@
 /node_modules/*
 .idea/
 *.log
-/routes/*
-!/routes/Readme.md
+/volume_data/*
+!/volume_data/Readme.md

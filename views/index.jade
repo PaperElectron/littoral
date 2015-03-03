@@ -1,10 +1,33 @@
 doctype html
-head
-  title Littoral demo server.
+html
+  head
+    title Littoral demo server.
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.min.css')
 
-body
-  h1 Welcome to littoral
+  body(style="background-color: #FCF7FF")
+    .jumbotron(style="background-image: url(/images/littoral.jpg); background-size: 100%; color: #E2DAE8")
+      .container
+        h1 Littoral
+        p A self contained, modular showcase server.
+    .container-fluid
+      .row
+        .col-lg-12
+          h3 Rendering Jade based on index file in default view.
+      .row
+        .col-lg-12
+          h3 #{apps.length} Demos:
+          .container
+            .row
+              each app in apps
+                .col-sm-6.col-md-4.col-lg-6
+                  .thumbnail
+                    if app.teaser
+                      img(src=app.teaser, alt='...')
+                    .caption
+                      h3
+                        a(href=app.path) #{app.name}
+                      p= app.description
 
-  each app in apps
-    a(href=app.path) #{app.name}
-    p= app.description
+
+
+

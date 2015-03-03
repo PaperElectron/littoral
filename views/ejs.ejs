@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Littoral demo server.</title>
+    </head>
+    <body>
+    <h1>Welcome to Littoral</h1>
+    <h3>Rendering EJS based on index file in default view.</h3>
+    <% apps.forEach(function(app, key){ %>
+        <a href=<%= app.path %>><%= app.name %></a>
+        <p><%= app.description %></p>
+
+    <% }) %>
+
+    </body>
+</html>
