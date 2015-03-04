@@ -1,17 +1,44 @@
-.arrange {background-color: #4f4082; padding-bottom: 1em}
-.sizer {width: 20%}
+body {
+    background-color: #FCF7FF;
+}
+.arrange {
+    /*background-color: #4f4082; */
+    /*padding-right: 1em;*/
+    /*padding-bottom: 1em*/
+}
+.sizer {width: 33%}
 .gutter-size {width: 1em}
-.demo { padding: 1em 0 0 1em; }
-.demoHolder {
+.demo {
+    padding: .5em;
+}
+.demo .demoHolder {
+    box-shadow: 1px 1px 6px 1px rgba(79,64,130,0.9);
     background-color: #fff;
     padding: 1em;
 }
-.demo.tiny {width: 10%}
-.demo.small {width: 25%}
-.demo.medium {width: 50%}
-.demo.large {width: 75%}
-.demo.full {width: 100%; padding: 1em 1em 0 1em}
-
+/*.demo.tiny {width: 10%;}*/
+/*.demo.small {width: 25%;}*/
+/*.demo.medium {width: 50%;}*/
+/*.demo.large {width: 75%;}*/
+/*.demo.full {width: 100%;}*/
+.demo .info {
+    padding: 1em;
+    border: 2px inset rgba(79,64,130,0.3);
+}
+.demo .info .thumbnail {
+    background: none;
+}
 .demo .thumbnail {
     margin-bottom: 0px;
+}
+
+.jumbotron {
+    margin-bottom: 5px;
+    background-image: url(/images/littoral.jpg);
+    background-size: 100%;
+    color: #E2DAE8;
+}
+.footer {
+    background-color: #4F4082;
+    color: #E2DAE8
 }

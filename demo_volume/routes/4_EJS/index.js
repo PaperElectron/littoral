@@ -9,6 +9,6 @@ module.exports = function(router){
     teaserImage: 'ejs.png',
     description: 'EJS Templating.',
     basePath: '/ejs',
-    extraClass: 'tiny'
+    extraClass: 'medium'
   }
 };

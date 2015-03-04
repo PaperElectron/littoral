@@ -9,6 +9,6 @@ module.exports = function(router){
     teaserImage: 'handlebars.jpeg',
     description: 'Handlebars Templating.',
     basePath: '/hbs',
-    extraClass: 'small'
+    extraClass: 'medium'
   }
 };

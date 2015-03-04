@@ -5,31 +5,79 @@ html
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.min.css')
     link(rel='stylesheet', href='/css/main.css')
 
-  body(style="background-color: #FCF7FF")
-    .jumbotron(style="background-image: url(/images/littoral.jpg); background-size: 100%; color: #E2DAE8")
+  body
+    .jumbotron
       .container
         h1 Littoral
         p A self contained, modular showcase server.
-    .container-fluid
-      .row
-        .col-lg-12
-          h3 Rendering Jade based on index file in default view.
+
     .container-fluid
       .row
         .col-lg-12
           h3 #{apps.length} Demos:
           .arrange
-            each app in apps
-              .demo(class="#{app.extraClass}")
-                .demoHolder
-                  if app.teaserImage
-                    a.thumbnail(href=app.basePath)
-                      img(src=app.teaserImage, alt='...')
-                  .caption
+            .sizer
+            .demo
+              .info
+                h1 Littoral is a platform,
+                p.lead For hosting all of the cool little projects you create
+                  |in a modular and self-contained enviornment.
+            .demo
+              .info
+                a.thumbnail(href="https://www.docker.com/")
+                  img(src='https://d3oypxn00j2a10.cloudfront.net/0.15.4/images/pages/brand_guidelines/small_v.png')
+                h1 Docker
+                p.lead Makes it easy to host
+                p Managing your data is as simple as git itself.
+                p Store your demo sites as separate directories in a git repo,
+                p Then link it as a volume with docker.
+            .demo
+              .info
+                a.thumbnail(href='http://blog.paperelectron.com/building-a-maintainable-demo-site/')
+                  img(src="https://s.gravatar.com/avatar/8641033280dec2ed4189002978504fa6?s=120")
+                a(href='http://blog.paperelectron.com/building-a-maintainable-demo-site/')
+                  h3 You can read more here.
+            each app, index in apps
+              if index % 2 === 0
+                .demo(class="#{app.extraClass}")
+                  .demoHolder
+                    if app.teaserImage
+                      a.thumbnail(href=app.basePath)
+                        img(src=app.teaserImage, alt='...')
+                    .caption
+                      h3
+                        a(href=app.basePath) #{app.name}
+                      p= app.description
+            .demo
+              .info
+                h3 Easily Configurable.
+                p Littoral gives you the tools to host your demos,
+                p and then gets out of the way.
+            each app, index in apps
+              if index % 2 === 1
+                .demo(class="#{app.extraClass}")
+                  .demoHolder
+                    if app.teaserImage
+                      a.thumbnail(href=app.basePath)
+                        img(src=app.teaserImage, alt='...')
+
                     h3
                       a(href=app.basePath) #{app.name}
                     p= app.description
+            .demo
+              .info
+                h1 3 Template Languages
+                p Automatically detects and renders
+                p Jade, Handlebars and EJS
+                p Also detects plain HTML if that is
+                p your thing.
+    footer.footer
+        .container-fluid
+          .col-sm-12
+            a(href="") Fork this on github
 
+    a(href='https://github.com/PaperElectron/littoral')
+      img(style='position: absolute; top: 0; right: 0; border: 0; width: 149px; height: 149px;', src='http://aral.github.com/fork-me-on-github-retina-ribbons/right-graphite@2x.png', alt='Fork me on GitHub')
     include scripts
 
 

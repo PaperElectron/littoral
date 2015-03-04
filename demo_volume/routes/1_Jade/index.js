@@ -11,6 +11,6 @@ module.exports = function(router){
     basePath: '/jade',
     //Optional
     teaserImage: 'jade.png',
-    extraClass: 'full'
+    extraClass: 'large'
   }
 };
