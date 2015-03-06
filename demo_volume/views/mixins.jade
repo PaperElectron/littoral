@@ -1,0 +1,36 @@
+mixin jumbotron(title, subTitle, imgUrl)
+  .jumbotron(style="background-image:url(#{imgUrl})")
+    .container
+      h1 #{title}
+      p #{subTitle}
+
+mixin page-header(title, subTitle, imgUrl)
+  .page-header(style="background-image:url(#{imgUrl})")
+    .container-fluid
+      h1 #{title}&nbsp;
+        small #{subTitle}
+
+mixin demoBox(name, description, basePath, teaserImage, extraClass)
+  .demo(class="#{extraClass}")
+    .demoHolder
+      if teaserImage
+        //This is wrong, dont do this.
+        if name === 'Jade'
+          .container
+            .col-sm-4
+              a.thumbnail(href=basePath)
+                img(src=teaserImage, alt='...')
+            .col-sm-8
+              h3
+                a(href=basePath) #{name}
+              p !{description}
+        else
+          a.thumbnail(href=basePath)
+            img(src=teaserImage, alt='Jade logo')
+          h3
+            a(href=basePath) #{name}
+          p !{description}
+      else
+        h3
+          a(href=basePath) #{name}
+        p !{description}

@@ -5,7 +5,6 @@ $(function(){
     pack.show()
     pack.packery({
       itemSelector: '.demo'
-      //columnWidth: '.sizer'
     })
 
   });

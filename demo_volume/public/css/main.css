@@ -1,7 +1,9 @@
 body {
     background-color: #FCF7FF;
+    padding-bottom: 70px;
 }
 .arrange {
+    position: relative;
     /*background-color: #4f4082; */
     /*padding-right: 1em;*/
     /*padding-bottom: 1em*/
@@ -16,11 +18,7 @@ body {
     background-color: #fff;
     padding: 1em;
 }
-/*.demo.tiny {width: 10%;}*/
-/*.demo.small {width: 25%;}*/
-/*.demo.medium {width: 50%;}*/
-/*.demo.large {width: 75%;}*/
-/*.demo.full {width: 100%;}*/
+
 .demo .info {
     padding: 1em;
     border: 2px inset rgba(79,64,130,0.3);
@@ -34,11 +32,24 @@ body {
 
 .jumbotron {
     margin-bottom: 5px;
-    background-image: url(/images/littoral.jpg);
+    /*background-image: url(/images/littoral.jpg);*/
     background-size: 100%;
     color: #E2DAE8;
 }
+
+.page-header {
+    margin: 0 0 1em;
+    padding: 1em 0 1.5em;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .footer {
     background-color: #4F4082;
     color: #E2DAE8
+}
+.navbar-brand {
+    height: 50px;
+    padding: 5px;
 }

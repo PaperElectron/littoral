@@ -1,16 +1,10 @@
-doctype html
-html
-  head
-    title Littoral demo server.
-    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.min.css')
-    link(rel='stylesheet', href='/css/main.css')
+extends ./jadeBase
+include mixins
 
-  body
-    .jumbotron
-      .container
-        h1 Littoral
-        p A self contained, modular showcase server.
+block header
+  +jumbotron(site.name, site.description, '/images/littoral.jpg')
 
+block pageContent
     .container-fluid
       .row
         .col-lg-12
@@ -39,15 +33,8 @@ html
                   h3 You can read more here.
             each app, index in apps
               if index % 2 === 0
-                .demo(class="#{app.extraClass}")
-                  .demoHolder
-                    if app.teaserImage
-                      a.thumbnail(href=app.basePath)
-                        img(src=app.teaserImage, alt='...')
-                    .caption
-                      h3
-                        a(href=app.basePath) #{app.name}
-                      p= app.description
+                +demoBox(app.name, app.description, app.basePath, app.teaserImage, app.extraClass)
+
             .demo
               .info
                 h3 Easily Configurable.
@@ -55,15 +42,8 @@ html
                 p and then gets out of the way.
             each app, index in apps
               if index % 2 === 1
-                .demo(class="#{app.extraClass}")
-                  .demoHolder
-                    if app.teaserImage
-                      a.thumbnail(href=app.basePath)
-                        img(src=app.teaserImage, alt='...')
+                +demoBox(app.name, app.description, app.basePath, app.teaserImage, app.extraClass)
 
-                    h3
-                      a(href=app.basePath) #{app.name}
-                    p= app.description
             .demo
               .info
                 h1 3 Template Languages
@@ -71,13 +51,9 @@ html
                 p Jade, Handlebars and EJS
                 p Also detects plain HTML if that is
                 p your thing.
-    footer.footer
-        .container-fluid
-          .col-sm-12
-            a(href="") Fork this on github
 
-    a(href='https://github.com/PaperElectron/littoral')
-      img(style='position: absolute; top: 0; right: 0; border: 0; width: 149px; height: 149px;', src='http://aral.github.com/fork-me-on-github-retina-ribbons/right-graphite@2x.png', alt='Fork me on GitHub')
+
+block scripts
     include scripts
 
 
