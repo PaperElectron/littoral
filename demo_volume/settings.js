@@ -4,6 +4,7 @@ module.exports = {
    *
    */
   production: {
+    theme: 'littoral-demo-theme',
     /*
      * Global variables available to every page in your application.
      */
@@ -32,6 +33,7 @@ module.exports = {
     }
   },
   development: {
+    theme: 'littoral-demo-theme',
     globals: {
       name: 'Littoral',
       description: 'A self contained, modular, exhibition server.'
@@ -47,6 +49,7 @@ module.exports = {
     }
   },
   test: {
+    theme: 'littoral-demo-theme',
     globals: {
       name: 'Littoral',
       description: 'A self contained, modular, exhibition server.'

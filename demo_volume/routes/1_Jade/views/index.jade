@@ -1,7 +1,7 @@
-extends ../../../views/jadeBase
+extends /jadeBase
 
 block header
-  include ../../../views/mixins
+  include /mixins
   +page-header('Jade Templating', 'extending the parent Jade file','/images/littoral.jpg')
 
 block pageContent
@@ -19,14 +19,14 @@ block pageContent
          |that is located in the parent views directory.
 
         p just add
-         code "extends ../../../views/jadeBase"
+         code "extends /jadeBase"
          | at the top of a projects view file inside of its view directory.
 
         h4 You can also create and include mixins, I'm using one here for the page header.
 
         p Just add
-          code "include ../../../views/mixins"
-          | at the top of the file (../../ path is relative to the main view directory)
+          code "include /mixins"
+          | at the top of the file (/ path is relative to the main view directory)
 
 
 block scripts
