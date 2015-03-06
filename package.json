@@ -1,6 +1,6 @@
 {
   "name": "littoral",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A self contained server for examples and demos.",
   "main": "index.js",
   "scripts": {
