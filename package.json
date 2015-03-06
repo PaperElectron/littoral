@@ -11,6 +11,10 @@
     "type": "git",
     "url": "https://github.com/PaperElectron/littoral.git"
   },
+  "preferGlobal": true,
+  "bin": {
+    "littoral": "cli/index.js"
+  },
   "keywords": [
     "Application",
     "Docker",
@@ -24,6 +28,7 @@
   },
   "homepage": "https://github.com/PaperElectron/littoral",
   "dependencies": {
+    "commander": "^2.6.0",
     "ejs": "^2.3.1",
     "express": "^4.12.1",
     "hbs": "^2.8.0",
