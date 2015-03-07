@@ -2,7 +2,6 @@
   "name": "littoral-demo-theme",
   "version": "0.0.0",
   "description": "The stock theme for littoral.",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

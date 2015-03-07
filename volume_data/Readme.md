@@ -1,1 +1,0 @@
-Docker mounted application files live here.
