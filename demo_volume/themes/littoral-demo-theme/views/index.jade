@@ -8,7 +8,7 @@ block pageContent
     .container-fluid
       .row
         .col-lg-12
-          h3 #{apps.length} Demos:
+          h3 #{apps.length} Loaded demos:
           .arrange
             .sizer
             .demo
@@ -16,6 +16,27 @@ block pageContent
                 h1 Littoral is a platform,
                 p.lead For hosting all of the cool little projects you create
                   |in a modular and self-contained enviornment.
+
+                p.sizer It allows you to store all of your front end demo projects in one place
+                  | easily managed with a git repo.
+                p.sizer You can control the styling, either choosing to extend the base jade or handlebar
+                  | template or by loading up all custom resources in each sub application.
+                p.lead Customization
+                p.sizer By default Littoral loads with this content and styling. You can easily override some or
+                  | all of this by creating a directory at
+                  code  ~/.littoral
+                  |&nbsp; (under whatever user you are running it with)
+                  | containing
+                  |&nbsp;
+                  code ~/.littoral/routes
+                  |&nbsp;
+                  code ~/.littoral/themes/MyTheme
+                  | &nbsp; and &nbsp;
+                  code ~/.littoral/settings.js
+                p.sizer The
+                  code ~/.littoral/routes
+                  | directory will contain all of your demo projects routes and assets.
+
             .demo
               .info
                 a.thumbnail(href="https://www.docker.com/")
@@ -30,7 +51,7 @@ block pageContent
                 a.thumbnail(href='http://blog.paperelectron.com/building-a-maintainable-demo-site/')
                   img(src="https://s.gravatar.com/avatar/8641033280dec2ed4189002978504fa6?s=120")
                 a(href='http://blog.paperelectron.com/building-a-maintainable-demo-site/')
-                  h3 You can read more here.
+                  h3 Read more.
             each app, index in apps
               if index % 2 === 0
                 +demoBox(app.name, app.description, app.basePath, app.teaserImage, app.extraClass)

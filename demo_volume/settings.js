@@ -1,7 +1,7 @@
 module.exports = {
   /*
-   * Production enviornment is used in the paperelectron/littoral-docker image.
-   *
+   * Production env is used in the paperelectron/littoral-docker image.
+   * And is the default when starting the app with NODE_ENV unset
    */
   production: {
     theme: 'littoral-demo-theme',
@@ -10,21 +10,8 @@ module.exports = {
      */
     globals: {
       name: 'Littoral',
+      title: 'Littoral Demo Server',
       description: 'A self contained, modular, exhibition server.'
-    },
-    /*
-     * You can add anything you like to "mainApp" and "subApp"
-     */
-    locals: {
-      /*
-       * These variables will be added to every page inside the "request" variable
-       * available to your templates. These are useful for setting things like CSS classes
-       * that may be different between the main page and a demos page.
-       */
-      mainApp: {
-      },
-      subApp: {
-      }
     },
     server: {
       //Warning this MUST be 8080 if you are running the
@@ -32,33 +19,29 @@ module.exports = {
       port: 8080
     }
   },
+  /*
+   * development env is used when running via "npm start"
+   */
   development: {
     theme: 'littoral-demo-theme',
     globals: {
       name: 'Littoral',
+      title: 'Littoral Demo Server',
       description: 'A self contained, modular, exhibition server.'
-    },
-    locals: {
-      mainApp: {
-      },
-      subApp: {
-      }
     },
     server: {
       port: 8080
     }
   },
+  /*
+   * test env is used when running via npm test
+   */
   test: {
     theme: 'littoral-demo-theme',
     globals: {
       name: 'Littoral',
+      title: 'Littoral Demo Server',
       description: 'A self contained, modular, exhibition server.'
-    },
-    locals: {
-      mainApp: {
-      },
-      subApp: {
-      }
     },
     server: {
       port: 8080

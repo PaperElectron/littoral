@@ -1,5 +1,5 @@
 body {
-    background-color: #FCF7FF;
+    background-color: #fff;
     padding-bottom: 70px;
 }
 .arrange {
@@ -14,17 +14,23 @@ body {
     padding: .5em;
 }
 .demo .demoHolder {
-    box-shadow: 1px 1px 6px 1px rgba(79,64,130,0.9);
+    box-shadow: 1px 1px 6px 1px rgba(100,100,100,0.9);
     background-color: #fff;
     padding: 1em;
 }
 
 .demo .info {
     padding: 1em;
-    border: 2px inset rgba(79,64,130,0.3);
+    background-color: rgba(220,220,220,0.5);
+    box-shadow: inset 0px 0px 5px 0px rgba(100,100,100,0.9);
+    border-radius: .5em;
+    /*border: 1px inset rgba(150, 150, 150, 0.9);*/
 }
 .demo .info .thumbnail {
     background: none;
+}
+.demo .info .sizer {
+    width: 50%;
 }
 .demo .thumbnail {
     margin-bottom: 0px;
@@ -32,7 +38,7 @@ body {
 
 .jumbotron {
     margin-bottom: 5px;
-    /*background-image: url(/images/littoral.jpg);*/
+    padding-bottom: 5em;
     background-size: 100%;
     color: #E2DAE8;
 }

@@ -4,7 +4,7 @@
   "description": "A self contained server for examples and demos.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "NODE_ENV=development node index.js",
     "test": "NODE_ENV=test mocha --ui tdd --reporter spec"
   },
   "repository": {
@@ -29,11 +29,15 @@
   "homepage": "https://github.com/PaperElectron/littoral",
   "dependencies": {
     "commander": "^2.6.0",
+    "compression": "^1.4.1",
     "ejs": "^2.3.1",
     "express": "^4.12.1",
     "hbs": "^2.8.0",
     "jade": "^1.9.2",
-    "lodash": "^3.3.1"
+    "lodash": "^3.3.1",
+    "morgan": "^1.5.1",
+    "response-time": "^2.3.0",
+    "serve-favicon": "^2.2.0"
   },
   "devDependencies": {
     "chai": "^2.1.1",

@@ -5,10 +5,11 @@ module.exports = function(router){
   });
 
   return {
-    name: 'HBS',
-    teaserImage: 'handlebars.jpeg',
-    description: 'Handlebars Templating.',
+    name: 'Handlebars Templating',
+    description: 'HBS is the next most preffered templating engine.',
+    title: 'Handlebars',
     basePath: '/hbs',
-    extraClass: 'medium'
+    //Optional
+    teaserImage: 'handlebars.jpeg'
   }
 };

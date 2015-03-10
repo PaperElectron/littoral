@@ -6,9 +6,10 @@ module.exports = function(router){
 
   return {
     name: 'HTML',
-    teaserImage: 'html5.png',
-    description: 'Plain HTML. No templating',
+    description: 'You can also use plain HTML.',
+    title: 'HTML',
     basePath: '/html',
-    extraClass: 'medium'
+    //Optional
+    teaserImage: 'html5.png'
   }
 };

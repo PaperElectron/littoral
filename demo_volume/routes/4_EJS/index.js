@@ -8,6 +8,7 @@ module.exports = function(router){
     name: 'EJS',
     teaserImage: 'ejs.png',
     description: 'EJS Templating.',
+    title: 'EJS',
     basePath: '/ejs',
     extraClass: 'medium'
   }
