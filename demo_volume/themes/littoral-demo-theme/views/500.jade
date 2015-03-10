@@ -1,3 +1,12 @@
-//
-   Created by monstertke on 3/10/15.
-
+extends ./base
+include ./mixins
+block header
+  +jumbotron("Error!", "This is embarrassing")
+block pageContent
+  .container-fluid
+    .row
+      .col-sm-12
+        h3.text-center #{status} server error.
+    .row
+      .col-sm-12
+        h3.text-center: a(href='/') Go back?

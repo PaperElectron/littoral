@@ -1,2 +1,14 @@
 extends ./base
+include ./mixins
+block header
+  +jumbotron("Sorry", "We couldn't find that.")
+
+block pageContent
+  .container-fluid
+    .row
+      .col-sm-12
+        h3.text-center #{url} was not found.
+    .row
+      .col-sm-12
+        h3.text-center: a(href='/') Go back?
 
