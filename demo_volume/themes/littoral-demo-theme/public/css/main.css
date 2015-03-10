@@ -8,8 +8,6 @@ body {
     /*padding-right: 1em;*/
     /*padding-bottom: 1em*/
 }
-.sizer {width: 33%}
-.gutter-size {width: 1em}
 .demo {
     padding: .5em;
 }
@@ -29,7 +27,7 @@ body {
 .demo .info .thumbnail {
     background: none;
 }
-.demo .info .sizer {
+.half{
     width: 50%;
 }
 .demo .thumbnail {
@@ -39,15 +37,19 @@ body {
 .jumbotron {
     margin-bottom: 5px;
     padding-bottom: 5em;
-    background-size: 100%;
+    background-color: #553f6e;
+    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
     color: #E2DAE8;
 }
 
 .page-header {
     margin: 0 0 1em;
     padding: 1em 0 1.5em;
-    background-size: 100%;
-    background-position: center;
+    background-color: #553f6e;
+    background-size: cover;
+    background-position: left center;
     background-repeat: no-repeat;
 }
 

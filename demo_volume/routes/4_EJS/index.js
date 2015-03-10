@@ -7,7 +7,7 @@ module.exports = function(router){
   return {
     name: 'EJS',
     teaserImage: 'ejs.png',
-    description: 'EJS Templating.',
+    description: 'EJS Templating. Its in here, but not for long, so I wouldn\'t use it.',
     title: 'EJS',
     basePath: '/ejs',
     extraClass: 'medium'

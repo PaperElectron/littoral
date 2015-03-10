@@ -9,12 +9,7 @@ module.exports = function(router){
   return {
     //Required
     name: 'Jade Templating.',
-    description: "<h2>Jade is used for the most complete example</h2>" +
-    "<p>Its used for the layout of this main page, and of course its own page." +
-    "These examples show the most complete" +
-    "usage of all of the features built into Littoral." +
-    "Most of the semi-complicated usage can be accomplished with" +
-    "handlebars just as easily, I just happen to like Jade a bit better.</p>",
+    description: "<h2>Jade is used for the most complete example</h2>",
     title: 'Jade',
     basePath: '/jade',
     //Optional
