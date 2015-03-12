@@ -1,0 +1,20 @@
+extends /base
+include /mixins
+block header
+  +page-header('Recursive Routes', 'Turtles all the way down.','/images/littoral.jpg')
+block pageContent
+  .container-fluid
+    .row
+      .col-sm-2
+      .col-sm-8
+        h1 By nesting routes directories.
+        h3 You can categorize your applications.
+        img(src="http://i.imgur.com/m1dnGXS.png")
+    .row
+      .col-sm-12
+        .arrange
+          each app in apps
+            +demoBox(app.name, app.description, app.absolutePath, app.teaserImage)
+
+block scripts
+  script(src='/js/main.js')

@@ -14,19 +14,8 @@ mixin demoBox(name, description, basePath, teaserImage, extraClass)
   .demo(class="#{extraClass}")
     .demoHolder
       if teaserImage
-        //This is wrong, dont do this.
-        if name === 'Jade'
-          .container
-            .col-sm-4
-              a.thumbnail(href=basePath)
-                img(src=teaserImage, alt='...')
-            .col-sm-8
-              h3
-                a(href=basePath) #{name}
-              p !{description}
-        else
           a.thumbnail(href=basePath)
-            img(src=teaserImage, alt='Jade logo')
+            img(src=teaserImage, alt='Teaser Image')
           h3
             a(href=basePath) #{name}
           p !{description}
@@ -34,3 +23,36 @@ mixin demoBox(name, description, basePath, teaserImage, extraClass)
         h3
           a(href=basePath) #{name}
         p !{description}
+
+mixin showVars()
+  pre Current page variables:
+    if app
+      pre app:
+        pre
+          each a, k in app
+            if k === 'subApplications'
+              code #{k}: #{a.length}
+              br/
+              each v, b in a
+                code &nbsp&nbsp;#{b}:
+                br/
+                code &nbsp&nbsp;&nbsp&nbsp;name: #{v.name}
+                br/
+                code &nbsp&nbsp;&nbsp&nbsp;absolutePath: #{v.absolutePath}
+                br/
+            else
+              code #{k}: #{a}
+              br/
+    if apps
+      pre apps:
+        each app in apps
+          pre
+            each v, k in app
+              code #{k}: #{v}
+              br/
+    if site
+      pre site:
+        pre
+          each v, k in site
+            code #{k}: #{v}
+            br/
