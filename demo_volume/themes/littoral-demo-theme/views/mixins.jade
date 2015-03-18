@@ -1,14 +1,28 @@
 mixin jumbotron(title, subTitle, imgUrl)
-  .jumbotron(style="background-image:url(#{imgUrl})")
-    .container
-      h1 #{title}
-      p #{subTitle}
+  if imgUrl
+    .jumbotron(style="background-image:url(#{imgUrl})")
+      .container
+        h1 #{title}
+        p #{subTitle}
+  else
+    .jumbotron
+      .container
+        h1 #{title}
+        p #{subTitle}
 
 mixin page-header(title, subTitle, imgUrl)
-  .page-header(style="background-image:url(#{imgUrl})")
-    .container-fluid
-      h1 #{title}&nbsp;
-        small #{subTitle}
+  if imgUrl
+    .page-header(style="background-image:url(#{imgUrl})")
+      .container-fluid
+        a(href=app.parentPath) Back to parent
+        h1 #{title}&nbsp;
+          small #{subTitle}
+  else
+    .page-header
+      .container-fluid
+        a(href=app.parentPath) Back to parent
+        h1 #{title}&nbsp;
+          small #{subTitle}
 
 mixin demoBox(name, description, basePath, teaserImage, extraClass)
   .demo(class="#{extraClass}")
@@ -24,7 +38,7 @@ mixin demoBox(name, description, basePath, teaserImage, extraClass)
           a(href=basePath) #{name}
         p !{description}
 
-mixin showVars()
+mixin debug()
   pre Current page variables:
     if app
       pre app:

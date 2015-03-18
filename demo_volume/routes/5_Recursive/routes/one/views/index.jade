@@ -1,0 +1,27 @@
+extends /base
+include /mixins
+block header
+  +page-header('Recursive Routes', 'Turtles all the way down.','/images/littoral.jpg')
+block pageContent
+  .container-fluid
+    .row
+      .col-sm-12
+        h1 By nesting routes directories.
+        h3 You can categorize your applications.
+    .row
+      .col-sm-12
+        .arrange
+          .demo
+            .info
+              a.thumbnail(href="https://nodejs.org/api/process.html#process_process_memoryusage")
+                img(src="http://i.imgur.com/5yCHMsC.png")
+              h1 How deep?
+              p.lead A reasonable amount.
+              p You can probably do this 40 levels deep, as there isn't a huge amount of overhead.
+              p But keep in mind that each of these routes represents
+              p an entirely new express application and the memory usage that entails.
+          each app in apps
+            +demoBox(app.name, app.description, app.absolutePath, app.teaserImage)
+
+block scripts
+  script(src='/js/main.js')

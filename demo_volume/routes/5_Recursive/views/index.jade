@@ -7,14 +7,20 @@ block header
 block pageContent
   .container-fluid
     .row
-      .col-sm-2
-      .col-sm-8
+      .col-sm-12
         h1 By nesting routes directories.
         h3 You can categorize your applications.
-        img(src="http://i.imgur.com/m1dnGXS.png")
     .row
       .col-sm-12
         .arrange
+          .demo
+            .info
+              a.thumbnail(href="https://www.docker.com/")
+                img(src="http://i.imgur.com/m1dnGXS.png")
+              h1 Simple
+              p.lead Database free categorization.
+              p No need for a database, just nest your sub pages inside of an existing
+              p route directory and all of the routes inside will be listed on the parent page.
           each app in apps
             +demoBox(app.name, app.description, app.basePath, app.teaserImage)
 block scripts

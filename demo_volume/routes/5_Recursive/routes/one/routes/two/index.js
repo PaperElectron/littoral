@@ -5,11 +5,11 @@ module.exports = function(router){
 
   return {
     //Required
-    name: 'App structure.',
-    description: "<h2>Recursive route building</h2>",
-    title: 'Jade',
+    name: 'Final Level',
+    description: "<h2>But we can go further.</h2>",
+    title: 'Parliament',
     basePath: '/two',
     //Optional
-    teaserImage: 'jade.png'
+    teaserImage: 'more_owls.jpg'
   }
 };

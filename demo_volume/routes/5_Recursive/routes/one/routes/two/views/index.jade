@@ -1,0 +1,9 @@
+extends /base
+include /mixins
+block header
+  +page-header('Final level', 'still extending the base template.')
+
+block pageContent
+  .container-fluid
+    .col-sm-12
+      h1 Two nested directories deep.

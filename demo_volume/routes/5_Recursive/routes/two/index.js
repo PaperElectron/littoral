@@ -5,11 +5,11 @@ module.exports = function(router){
 
   return {
     //Required
-    name: 'App structure.',
-    description: "<h2>Recursive route building</h2>",
-    title: 'Jade',
-    basePath: '/one',
+    name: 'Un-nested',
+    description: "<h2>Stop wherever</h2>",
+    title: 'Plain App',
+    basePath: '/two',
     //Optional
-    teaserImage: 'jade.png'
+    teaserImage: 'owlskate.jpg'
   }
 };
